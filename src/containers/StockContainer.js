@@ -6,7 +6,7 @@ class StockContainer extends Component {
   render() {
     // console.log(this.props)
     let arr=this.props.allStocks.map((stock,i)=>{
-      return <Stock  handleBuy={this.props.handleBuy} key={`${stock.id}`} eachStock={stock}/>
+      return <Stock  handleBuy={this.props.handleBuy} key={`${stock.id}-${i}-${stock.name}`} eachStock={stock}/>
     })
     return (
       <div>

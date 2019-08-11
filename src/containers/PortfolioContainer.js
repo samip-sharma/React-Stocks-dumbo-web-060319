@@ -6,7 +6,7 @@ class PortfolioContainer extends Component {
   render() {
 
     let arr=this.props.myStocks.map((stock,i)=>{
-     return <Stock index={i} key={stock.id} handleBuy={this.props.handleBuy} eachStock={stock}/>
+     return <Stock index={i} key={`${stock.id}-${i}-${stock.name}`} handleBuy={this.props.handleBuy} eachStock={stock}/>
     })
     return (
       <div>
