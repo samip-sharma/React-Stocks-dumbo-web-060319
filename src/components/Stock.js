@@ -1,15 +1,16 @@
 import React from 'react'
+// import { prependOnceListener } from 'cluster';
+// console.log(props)
+const Stock = (props) => {
 
-const Stock = () => (
+  return (
   <div>
 
-    <div className="card">
+    <div onClick={e=>props.handleBuy(props.eachStock,props.index)} className="card">
       <div className="card-body">
-        <h5 className="card-title">{
-            //Company Name
-          }</h5>
+        <h5 className="card-title">{props.eachStock.name}</h5>
         <p className="card-text">{
-            //ticker: stock price
+           `${props.eachStock.ticker}:${props.eachStock.price}`
           }</p>
       </div>
     </div>
@@ -17,5 +18,6 @@ const Stock = () => (
 
   </div>
 );
+        }
 
 export default Stock
